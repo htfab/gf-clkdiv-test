@@ -1,0 +1,18 @@
+.include $PDK_ROOT/gf180mcuD/libs.tech/ngspice/design.ngspice
+.lib $PDK_ROOT/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical
+.include $PDK_ROOT/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/spice/gf180mcu_fd_sc_mcu7t5v0.spice
+
+V1 VDD GND 5
+V2 VSS GND 0
+V3 VNW GND 5
+V4 VPW GND 0
+V5 CLK GND PULSE(0 5.0 10u 0 0 10u 20u 0)
+x1 Q QN VDD VNW VPW VSS gf180mcu_fd_sc_mcu7t5v0__inv_1
+x2 QN CLK Q VDD VNW VPW VSS gf180mcu_fd_sc_mcu7t5v0__dffq_1
+
+.control
+  save all
+  tran 1u 1000u uic
+  write clkdiv.raw
+  remzerovec
+.endc
