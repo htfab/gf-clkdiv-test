@@ -1,7 +1,7 @@
 v {xschem version=3.4.8RC file_version=1.3}
 G {}
 K {type=primitive
-format="@name @@I @@ZN @VDD @VNW @VPW @VSS @prefix\\\\inv_1"
+format="@name @@I @@Z @VDD @VNW @VPW @VSS @prefix\\\\clkbuf_1"
 template="name=x1 VDD=VDD VNW=VNW VPW=VPW VSS=VSS prefix=gf180mcu_fd_sc_mcu7t5v0__ "
 extra="VDD VNW VPW VSS prefix"
 verilogprefix=gf180mcu_fd_sc_mcu7t5v0__
@@ -19,12 +19,11 @@ E {}
 L 4 -20 -20 -20 20 {}
 L 4 -20 -20 20 0 {}
 L 4 -20 20 20 0 {}
-L 4 30 0 40 0 {}
+L 4 20 0 40 0 {}
 L 4 -40 0 -20 0 {}
 B 5 -42.5 -2.5 -37.5 2.5 {name=I dir=in goto=1 propag=1}
-B 5 37.5 -2.5 42.5 2.5 {name=ZN dir=out }
-A 4 25 0 5 180 360 {}
+B 5 37.5 -2.5 42.5 2.5 {name=Z dir=out }
 T {I} -35 -14 0 0 0.2 0.2 {}
-T {ZN} 41.25 -14 0 1 0.2 0.2 {}
+T {Z} 41.25 -14 0 1 0.2 0.2 {}
 T {@name} 2.5 15 0 0 0.2 0.2 {}
 T {@symname} -7.5 -25 0 0 0.2 0.2 {}
