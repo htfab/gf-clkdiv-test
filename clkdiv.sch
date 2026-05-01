@@ -6,15 +6,15 @@ S {}
 F {}
 E {}
 B 2 110 -740 910 -340 {flags=graph
-y1=-0.26
-y2=5.4
+y1=-0.13
+y2=5.1
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=5.2341825e-06
-x2=0.00021494727
+x1=1e-10
+x2=0.0001
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -48,7 +48,7 @@ C {code_shown.sym} 240 -80 0 0 {name=SETUP only_toplevel=false value=".include $
 .include $PDK_ROOT/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/spice/gf180mcu_fd_sc_mcu7t5v0.spice"}
 C {code_shown.sym} 760 -250 0 0 {name=STIMULI only_toplevel=false value=".control
   save all
-  tran 1u 1000u uic
+  tran 10n 100u uic
   write clkdiv.raw
   remzerovec
 .endc"}
@@ -62,7 +62,7 @@ C {lab_pin.sym} 60 -190 0 1 {name=p6 sig_type=std_logic lab=VNW}
 C {vsource.sym} 140 -160 0 0 {name=V4 value=0 savecurrent=false}
 C {lab_pin.sym} 140 -130 0 1 {name=p7 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 140 -190 0 1 {name=p9 sig_type=std_logic lab=VPW}
-C {vsource.sym} 60 -250 0 0 {name=V5 value="PULSE(0 5.0 10u 1n 1n 10u 20u 0)" savecurrent=false}
+C {vsource.sym} 60 -250 0 0 {name=V5 value="PULSE(0 5.0 1u 0 0 1u 2u 0)" savecurrent=false}
 C {lab_pin.sym} 60 -220 0 1 {name=p10 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 60 -280 0 1 {name=p12 sig_type=std_logic lab=CLK}
 C {lab_pin.sym} 620 -230 0 1 {name=p8 sig_type=std_logic lab=QN}

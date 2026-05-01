@@ -51,7 +51,7 @@ C {code_shown.sym} 240 -80 0 0 {name=SETUP only_toplevel=false value=".include $
 .include $PDK_ROOT/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/spice/gf180mcu_fd_sc_mcu7t5v0.spice"}
 C {code_shown.sym} 970 -250 0 0 {name=STIMULI only_toplevel=false value=".control
   save all
-  tran 1u 1000u uic
+  tran 10n 1000u uic
   write clkdiv_buffered.raw
   remzerovec
 .endc"}
@@ -65,7 +65,7 @@ C {lab_pin.sym} 60 -190 0 1 {name=p6 sig_type=std_logic lab=VNW}
 C {vsource.sym} 140 -160 0 0 {name=V4 value=0 savecurrent=false}
 C {lab_pin.sym} 140 -130 0 1 {name=p7 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 140 -190 0 1 {name=p9 sig_type=std_logic lab=VPW}
-C {vsource.sym} 60 -250 0 0 {name=V5 value="PULSE(0 5.0 10u 1n 1n 10u 20u 0)" savecurrent=false}
+C {vsource.sym} 60 -250 0 0 {name=V5 value="PULSE(0 5.0 10u 0 0 10u 20u 0)" savecurrent=false}
 C {lab_pin.sym} 60 -220 0 1 {name=p10 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 60 -280 0 1 {name=p12 sig_type=std_logic lab=CLK}
 C {lab_pin.sym} 820 -230 0 1 {name=p8 sig_type=std_logic lab=QN}
